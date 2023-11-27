@@ -25,7 +25,7 @@ public void verifyToken(String token) {
         throw new UnauthorizedException("The Token is Not Valid, please re-Login");
     }}
 
-    public String ExtractIdFromToken(String token) {
+    public String extractIdFromToken(String token) {
     return Jwts.parserBuilder().setSigningKey(Keys.hmacShaKeyFor(secret.getBytes())).build().parseClaimsJws(token).getBody().getSubject();
     }
 }
