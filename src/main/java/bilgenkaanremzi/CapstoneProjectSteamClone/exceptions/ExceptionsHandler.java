@@ -1,8 +1,10 @@
 package bilgenkaanremzi.CapstoneProjectSteamClone.exceptions;
 
+import bilgenkaanremzi.CapstoneProjectSteamClone.payload.ErrorsResponseDTO;
+import bilgenkaanremzi.CapstoneProjectSteamClone.payload.ErrorsResponseWithListDTO;
 import lombok.extern.slf4j.Slf4j;
-import org.emmek.bwfinale.payload.ErrorsResponseDTO;
-import org.emmek.bwfinale.payload.ErrorsResponseWithListDTO;
+
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.security.access.AccessDeniedException;

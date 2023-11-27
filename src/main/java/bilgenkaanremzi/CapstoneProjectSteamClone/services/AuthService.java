@@ -5,6 +5,7 @@ import bilgenkaanremzi.CapstoneProjectSteamClone.enums.Role;
 import bilgenkaanremzi.CapstoneProjectSteamClone.exceptions.UnauthorizedException;
 import bilgenkaanremzi.CapstoneProjectSteamClone.payload.NewUserDTO;
 import bilgenkaanremzi.CapstoneProjectSteamClone.payload.UserLoginDTO;
+import bilgenkaanremzi.CapstoneProjectSteamClone.repositories.CountryRepository;
 import bilgenkaanremzi.CapstoneProjectSteamClone.repositories.UserRepository;
 import bilgenkaanremzi.CapstoneProjectSteamClone.security.JWTTools;
 import org.apache.coyote.BadRequestException;
@@ -24,6 +25,8 @@ public class AuthService {
     private UserRepository userRepository;
     @Autowired
     private PasswordEncoder bcrypt;
+    @Autowired
+    private CountryRepository countryRepository;
 
     public String authenticateUser(UserLoginDTO body) {
         User user = userService.findByUsername(body.username());
@@ -44,8 +47,9 @@ public class AuthService {
         });
         User newUser = new User();
         newUser.setUsername(body.username());
+        newUser.setEmail(body.email());
         newUser.setDisplayName(body.displayName());
-       // newUser.setCountry(body.country());
+       newUser.setCountry(countryRepository.findByName(body.country()).orElse(null));
         newUser.setPassword(bcrypt.encode(body.password()));
         newUser.setRole(Role.USER);
 

@@ -15,7 +15,7 @@ public record NewUserDTO(
         String username,
         @NotEmpty(message = "Display name cannot be empty")
         String displayName,
-        @NotEmpty(message = "Contry cannot be empty")
+        @NotEmpty(message = "Country cannot be empty")
         String country
 
 ) {
