@@ -29,6 +29,8 @@ public class User implements UserDetails {
 
     private Role role;
 
+@ManyToOne
+@JoinColumn(name = "country_id")
 private Country country;
 
 
