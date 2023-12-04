@@ -30,4 +30,6 @@ private double price;
 private double salePrice;
     @OneToMany
     private Set<Review> reviews;
+    @OneToMany
+private Set<Comunity> comunities;
 }
