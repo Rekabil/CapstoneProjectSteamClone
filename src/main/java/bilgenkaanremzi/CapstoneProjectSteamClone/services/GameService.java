@@ -39,6 +39,8 @@ List<Category> categories = new ArrayList<>();
         newGame.setReleaseDate(body.releaseDate());
         newGame.setYear(body.releaseDate().getYear());
         newGame.setDescription(body.description());
+        newGame.setDeveloper(body.developer());
+        newGame.setPublisher(body.publisher());
         return gameRepository.save(newGame);
     }
 
@@ -81,9 +83,14 @@ public void findAndDeleteById(long id) {
         gameRepository.delete(found);
 }
 
-public Game uploadPicture(long id , MultipartFile file) throws IOException {
+public String upload(MultipartFile file) throws IOException {
+        return (String) cloudinary.uploader().upload(file.getBytes(), ObjectUtils.emptyMap()).get("url");
+}
+public Game uploadPicture(long id , MultipartFile file) throws NotFoundException, IOException {
         Game found = this.findById(id);
-        found.getPreview().add((String) cloudinary.uploader().upload(file.getBytes(), ObjectUtils.emptyMap()).get("url"));
+        System.out.println(found.toString());
+        System.out.println(this.upload(file));
+        found.getPreview().add(this.upload(file));
 
 return gameRepository.save(found);
 }
