@@ -6,10 +6,16 @@ import bilgenkaanremzi.CapstoneProjectSteamClone.exceptions.NotFoundException;
 import bilgenkaanremzi.CapstoneProjectSteamClone.payload.GamePostDTO;
 import bilgenkaanremzi.CapstoneProjectSteamClone.payload.GamePutDTO;
 import bilgenkaanremzi.CapstoneProjectSteamClone.repositories.GameRepository;
+import com.cloudinary.Cloudinary;
+import com.cloudinary.utils.ObjectUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -18,11 +24,17 @@ public class GameService {
     @Autowired
     GameRepository gameRepository;
 
+    @Autowired
+    private Cloudinary cloudinary;
+
     public Game save(GamePostDTO body) {
         Game newGame = new Game();
         newGame.setTitle(body.title());
         newGame.setPrice(body.price());
-        newGame.setCategories(body.categories());
+List<Category> categories = new ArrayList<>();
+        List<String> myList = new ArrayList<String>(Arrays.asList(body.categories().split(",")));
+        myList.forEach(category -> categories.add(Category.valueOf(category)));
+        newGame.setCategories(categories);
         newGame.setDetails(body.details());
         newGame.setReleaseDate(body.releaseDate());
         newGame.setYear(body.releaseDate().getYear());
@@ -67,5 +79,12 @@ public Page<Game> getGames(int page , int size, String orderBy, String category,
 public void findAndDeleteById(long id) {
         Game found = this.findById(id) ;
         gameRepository.delete(found);
+}
+
+public Game uploadPicture(long id , MultipartFile file) throws IOException {
+        Game found = this.findById(id);
+        found.getPreview().add((String) cloudinary.uploader().upload(file.getBytes(), ObjectUtils.emptyMap()).get("url"));
+
+return gameRepository.save(found);
 }
 }

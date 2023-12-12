@@ -11,6 +11,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.IOException;
 
 @RestController
 @RequestMapping("/games")
@@ -18,7 +21,7 @@ public class GameController {
     @Autowired
     private GameService gameService;
 
-    @PostMapping
+    @PostMapping("")
     @ResponseStatus(HttpStatus.CREATED)
     public Game saveGame(@RequestBody @Validated GamePostDTO body, BindingResult validation) {
         if (validation.hasErrors()) {
@@ -55,5 +58,13 @@ public class GameController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void findAndDeleteById(@PathVariable long id) {
         gameService.findAndDeleteById(id);
+    }
+
+
+    @PostMapping("/{id}/upload")
+    public Game uploadPreview(@PathVariable long id, @RequestParam("preview")MultipartFile body)throws IOException {
+        System.out.println(body.getSize());
+        System.out.println(body.getContentType());
+        return gameService.uploadPicture(id, body);
     }
 }

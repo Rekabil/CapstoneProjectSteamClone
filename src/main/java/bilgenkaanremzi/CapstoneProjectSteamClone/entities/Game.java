@@ -28,6 +28,9 @@ private LocalDate releaseDate;
 private int year;
 private double price;
 private double salePrice;
+private String developer;
+private String publisher;
+
     @OneToMany
     private Set<Review> reviews;
     @OneToMany
