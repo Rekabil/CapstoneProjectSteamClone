@@ -84,14 +84,17 @@ public void findAndDeleteById(long id) {
 }
 
 public String upload(MultipartFile file) throws IOException {
+        System.out.println("upload start");
         return (String) cloudinary.uploader().upload(file.getBytes(), ObjectUtils.emptyMap()).get("url");
 }
+
+
 public Game uploadPicture(long id , MultipartFile file) throws NotFoundException, IOException {
         Game found = this.findById(id);
         System.out.println(found.toString());
         System.out.println(this.upload(file));
         found.getPreview().add(this.upload(file));
-
+System.out.println("End Upload");
 return gameRepository.save(found);
 }
 }

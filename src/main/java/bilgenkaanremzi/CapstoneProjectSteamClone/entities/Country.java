@@ -1,6 +1,7 @@
 package bilgenkaanremzi.CapstoneProjectSteamClone.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -23,6 +24,7 @@ public class Country {
     private String code;
 
     @OneToMany
+    @JsonIgnore
     @ToString.Exclude
     private Set<User> users;
 }

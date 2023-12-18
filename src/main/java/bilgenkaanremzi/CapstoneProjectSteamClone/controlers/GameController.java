@@ -61,10 +61,10 @@ public class GameController {
     }
 
 
-    @PostMapping("/{id}/upload")
-    public Game uploadPreview(@PathVariable long id, @RequestParam("preview")MultipartFile body)throws IOException {
+    @PostMapping("/upload")
+    public String uploadPreview( @RequestParam("preview")MultipartFile body)throws IOException {
         System.out.println(body.getSize());
         System.out.println(body.getContentType());
-        return gameService.uploadPicture(id, body);
+        return gameService.upload(body);
     }
 }

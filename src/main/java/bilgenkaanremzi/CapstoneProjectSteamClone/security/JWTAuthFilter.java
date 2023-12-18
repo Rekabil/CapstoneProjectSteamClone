@@ -45,6 +45,7 @@ public class JWTAuthFilter  extends OncePerRequestFilter {
                 new AntPathMatcher().match("/v3/api-docs/**", request.getServletPath()) ||
                 new AntPathMatcher().match("/swagger-ui.html", request.getServletPath()) ||
                 new AntPathMatcher().match("/swagger-ui/**", request.getServletPath()) ||
-                new AntPathMatcher().match("/games/**" , request.getServletPath())
+                new AntPathMatcher().match("/games/**" , request.getServletPath()) ||
+                new AntPathMatcher().match("/countries/**",request.getServletPath())
         );}
 }

@@ -31,6 +31,9 @@ private double salePrice;
 private String developer;
 private String publisher;
 
+@ManyToMany
+private List<User> purchesedOwners;
+
     @OneToMany
     private Set<Review> reviews;
     @OneToMany
