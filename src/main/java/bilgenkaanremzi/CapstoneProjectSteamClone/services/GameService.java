@@ -91,9 +91,10 @@ public String upload(MultipartFile file) throws IOException {
 
 public Game uploadPicture(long id , MultipartFile file) throws NotFoundException, IOException {
         Game found = this.findById(id);
-        System.out.println(found.toString());
-        System.out.println(this.upload(file));
-        found.getPreview().add(this.upload(file));
+        List<String> newList = new ArrayList<>();
+    newList.add(this.upload(file));
+
+        found.setPreview(newList);
 System.out.println("End Upload");
 return gameRepository.save(found);
 }

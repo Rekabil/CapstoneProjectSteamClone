@@ -59,4 +59,10 @@ public User findByIdAndUpdate(@PathVariable long id, @RequestBody @Validated Use
     public void findByIdanddelete(@PathVariable long id) {
         userService.findByIdandDelete(id);
     }
+
+
+    @PostMapping("/purchase")
+    public User purchase(@AuthenticationPrincipal User currentUser, @RequestBody String gameIds) {
+        return userService.purchaseGame(currentUser.getId(), gameIds);
+    }
 }

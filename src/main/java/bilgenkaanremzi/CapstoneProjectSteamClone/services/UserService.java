@@ -1,5 +1,6 @@
 package bilgenkaanremzi.CapstoneProjectSteamClone.services;
 
+import bilgenkaanremzi.CapstoneProjectSteamClone.entities.Game;
 import bilgenkaanremzi.CapstoneProjectSteamClone.entities.User;
 import bilgenkaanremzi.CapstoneProjectSteamClone.exceptions.NotFoundException;
 import bilgenkaanremzi.CapstoneProjectSteamClone.repositories.UserRepository;
@@ -12,10 +13,17 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 @Service
 public class UserService {
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private GameService gameService;
 
     public Page<User> getUsers(int page, int size, String orderBy) {
         Pageable pageable = PageRequest.of(page,size, Sort.by(orderBy));
@@ -40,5 +48,12 @@ public class UserService {
     public void findByIdandDelete(long id) throws NotFoundException {
         User found =this.findById(id);
         userRepository.delete(found);
+    }
+
+    public User purchaseGame(long id, String gamesBought) {
+        User found = this.findById(id);
+        List<String> myList = new ArrayList<String>(Arrays.asList(gamesBought.split(",")));
+        myList.forEach((gameId) -> found.getOwnedGames().add(gameService.findById(Long.parseLong(gameId))));
+        return userRepository.save(found);
     }
 }

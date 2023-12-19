@@ -1,56 +1,35 @@
-2023-12-18T09:17:15.750+01:00  WARN 14516 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-18T09:17:19.932+01:00  WARN 14516 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+2023-12-19T10:28:30.768+01:00  WARN 13824 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-19T10:28:34.859+01:00  WARN 13824 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: 7713bc30-d3e5-4bc2-ab78-a24222904cb9
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2023-12-18T09:20:26.892+01:00  WARN 14516 --- [http-nio-3001-exec-4] org.apache.catalina.connector.Request    : Creating the temporary upload location [C:\Users\Rekabil\AppData\Local\Temp\tomcat.3001.5411460152580290125\work\Tomcat\localhost\ROOT] as it is required by the servlet [dispatcherServlet]
-2023-12-18T09:38:02.946+01:00  WARN 7212 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-18T09:38:07.026+01:00  WARN 7212 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 677d938b-ed19-4ef0-bbae-d9f1f13659ce
+Using generated security password: cfcca73a-1894-4bbe-bb8c-8158191a2f29
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2023-12-18T09:39:44.361+01:00  WARN 17324 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-18T09:39:48.336+01:00  WARN 17324 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+2023-12-19T12:57:33.752+01:00  WARN 20840 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-19T12:57:39.091+01:00  WARN 20840 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: 63c44495-e892-469a-81bc-6f7f110c077c
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2023-12-18T09:41:15.960+01:00  WARN 10560 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-18T09:41:19.514+01:00  WARN 10560 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 33b84f3e-5d5e-4740-96a6-6a5af54e69bc
+Using generated security password: 0a3d7c5e-9c8a-4fa4-8024-e8ad0ce683f3
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2023-12-18T11:20:56.448+01:00  WARN 11196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-18T11:21:00.468+01:00  WARN 11196 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+2023-12-19T13:01:23.446+01:00 ERROR 20840 --- [http-nio-3001-exec-4] b.C.exceptions.ExceptionsHandler         : Server Error
 
-Using generated security password: 7cc4a920-390f-46c2-85db-87f37028b66b
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2023-12-18T11:31:29.737+01:00  WARN 7744 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-18T11:31:33.563+01:00  WARN 7744 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: e25d46cd-a9c3-4a76-82ce-06f7540b3ae6
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2023-12-18T12:01:55.354+01:00 ERROR 7744 --- [http-nio-3001-exec-10] b.C.exceptions.ExceptionsHandler         : Server Error
-
-org.springframework.web.servlet.resource.NoResourceFoundException: No static resource gamesyear=2023.
-	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585) ~[spring-webmvc-6.1.1.jar:6.1.1]
-	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52) ~[spring-webmvc-6.1.1.jar:6.1.1]
+org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'preview' is not present.
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValueInternal(RequestParamMethodArgumentResolver.java:213) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:193) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:124) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:218) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:171) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.1.jar:6.1.1]
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.1.jar:6.1.1]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.1.jar:6.1.1]
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.1.jar:6.1.1]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.1.jar:6.1.1]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.16.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.16.jar:6.0]
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.1.jar:6.1.1]
 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.16.jar:6.0]
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
@@ -58,7 +37,7 @@ org.springframework.web.servlet.resource.NoResourceFoundException: No static res
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.16.jar:10.1.16]
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.1.1.jar:6.1.1]
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.1.1.jar:6.1.1]
@@ -78,8 +57,7 @@ org.springframework.web.servlet.resource.NoResourceFoundException: No static res
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.0.jar:6.2.0]
 	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.2.0.jar:6.2.0]
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at bilgenkaanremzi.CapstoneProjectSteamClone.security.JWTAuthFilter.doFilterInternal(JWTAuthFilter.java:38) ~[classes/:na]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.1.1.jar:6.1.1]
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.0.jar:6.2.0]
 	at bilgenkaanremzi.CapstoneProjectSteamClone.exceptions.ExceptionsHandlerFilter.doFilterInternal(ExceptionsHandlerFilter.java:23) ~[classes/:na]
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
@@ -138,16 +116,93 @@ org.springframework.web.servlet.resource.NoResourceFoundException: No static res
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
 	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
 
-2023-12-18T12:02:46.478+01:00 ERROR 7744 --- [http-nio-3001-exec-2] b.C.exceptions.ExceptionsHandler         : Server Error
+2023-12-19T13:06:33.905+01:00  WARN 3520 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-19T13:06:37.649+01:00  WARN 3520 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
 
-org.springframework.web.servlet.resource.NoResourceFoundException: No static resource gamesorderBy=releaseDate&year=.
+Using generated security password: 732b5007-48ae-4777-bf56-474a958f08d9
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-12-19T13:08:56.027+01:00  WARN 7296 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-19T13:08:59.630+01:00  WARN 7296 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: b25e4542-716d-437b-abc9-bf37253dd663
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-12-19T13:10:03.619+01:00  WARN 22444 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-19T13:10:07.606+01:00  WARN 22444 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: ccf91b83-e4e1-4cca-aa76-5e7f707bb3f5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-12-19T13:12:50.647+01:00  WARN 20884 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-19T13:12:54.463+01:00  WARN 20884 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: c7476cbe-01a3-4742-8be2-a9efffbee676
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-12-19T16:13:45.399+01:00  WARN 22764 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-19T16:13:51.142+01:00  WARN 22764 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 1c940ae4-d645-459d-ad02-403d6f2afcd9
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-12-19T16:20:28.811+01:00  WARN 22628 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-19T16:20:32.737+01:00  WARN 22628 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 1a143325-083b-40fc-ae44-165a9f17a378
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-12-19T16:48:55.279+01:00  WARN 22624 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-19T16:48:59.265+01:00  WARN 22624 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: dedf8914-5f78-402e-91c6-754a427717d1
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-12-19T16:52:56.630+01:00  WARN 5052 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-19T16:53:00.270+01:00  WARN 5052 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: c1c68450-f469-44a0-a574-e438201faac5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-12-19T17:04:57.854+01:00  WARN 22716 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-19T17:05:02.156+01:00  WARN 22716 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 4f4af7d8-8b07-47ef-a7c3-75fba5ea86e5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-12-19T17:07:26.127+01:00  WARN 22796 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-19T17:07:29.796+01:00  WARN 22796 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 808a1f95-9423-473e-ba75-60e1465b5b72
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-12-19T17:12:37.622+01:00  WARN 22984 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-19T17:12:42.209+01:00  WARN 22984 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 7cb70b51-201a-43fe-a77e-4e90b6b59ef2
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-12-19T17:15:11.548+01:00 ERROR 22984 --- [http-nio-3001-exec-5] b.C.exceptions.ExceptionsHandler         : Server Error
+
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource games/upload/1.
 	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585) ~[spring-webmvc-6.1.1.jar:6.1.1]
 	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52) ~[spring-webmvc-6.1.1.jar:6.1.1]
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.1.jar:6.1.1]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.1.jar:6.1.1]
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.1.jar:6.1.1]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.1.jar:6.1.1]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.16.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.16.jar:6.0]
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.1.jar:6.1.1]
 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.16.jar:6.0]
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
@@ -155,7 +210,7 @@ org.springframework.web.servlet.resource.NoResourceFoundException: No static res
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.16.jar:10.1.16]
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.1.1.jar:6.1.1]
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.1.1.jar:6.1.1]
@@ -175,8 +230,7 @@ org.springframework.web.servlet.resource.NoResourceFoundException: No static res
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.0.jar:6.2.0]
 	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.2.0.jar:6.2.0]
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at bilgenkaanremzi.CapstoneProjectSteamClone.security.JWTAuthFilter.doFilterInternal(JWTAuthFilter.java:38) ~[classes/:na]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.1.1.jar:6.1.1]
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.0.jar:6.2.0]
 	at bilgenkaanremzi.CapstoneProjectSteamClone.exceptions.ExceptionsHandlerFilter.doFilterInternal(ExceptionsHandlerFilter.java:23) ~[classes/:na]
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
@@ -234,4 +288,46 @@ org.springframework.web.servlet.resource.NoResourceFoundException: No static res
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
 	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-12-19T17:15:26.044+01:00  WARN 3548 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-19T17:15:29.920+01:00  WARN 3548 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 653f911b-5c16-4d5e-b862-80396b156b6c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-12-19T17:21:01.858+01:00  WARN 7692 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-19T17:21:05.843+01:00  WARN 7692 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 15f57476-ff45-4bea-9906-132b96019ee8
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-12-19T17:23:21.191+01:00  WARN 14088 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-19T17:23:24.951+01:00  WARN 14088 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 62df5de6-d5ce-49b0-a6f4-4efa59b72cf1
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-12-19T17:24:16.000+01:00  WARN 21952 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-19T17:24:20.253+01:00  WARN 21952 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 4b57cc44-5a0d-49b3-85d1-20c8959a8f3c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-12-19T17:28:47.901+01:00  WARN 20776 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-19T17:28:51.941+01:00  WARN 20776 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: dc1ae868-d74b-4412-8ae1-09fcb545e47a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-12-19T17:31:04.708+01:00  WARN 1320 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-19T17:31:08.851+01:00  WARN 1320 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: ee5eaf59-2c17-4b3c-a17f-fec5e92a455c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
