@@ -41,7 +41,6 @@ public User findByIdAndUpdate(@PathVariable long id, @RequestBody @Validated Use
     }
 
     @GetMapping("/me")
-    @Transactional
     public UserDetails getProfile(@AuthenticationPrincipal UserDetails currentUser) {
        System.out.println(currentUser);
         return currentUser;

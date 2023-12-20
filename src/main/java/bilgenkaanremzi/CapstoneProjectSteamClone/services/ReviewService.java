@@ -2,6 +2,7 @@ package bilgenkaanremzi.CapstoneProjectSteamClone.services;
 
 import bilgenkaanremzi.CapstoneProjectSteamClone.entities.Game;
 import bilgenkaanremzi.CapstoneProjectSteamClone.entities.Review;
+import bilgenkaanremzi.CapstoneProjectSteamClone.entities.User;
 import bilgenkaanremzi.CapstoneProjectSteamClone.exceptions.NotFoundException;
 import bilgenkaanremzi.CapstoneProjectSteamClone.payload.ReviewDTO;
 import bilgenkaanremzi.CapstoneProjectSteamClone.repositories.ReviewRepository;
@@ -19,6 +20,8 @@ public class ReviewService {
 
     @Autowired
     GameService gameService;
+    @Autowired
+    UserService userService;
 
     public Review save(ReviewDTO body, long id) {
         Game game = gameService.findById(body.gameId());
@@ -27,6 +30,7 @@ public class ReviewService {
         newReview.setGame(game);
         newReview.setRating(body.rating());
         newReview.setContent(body.content());
+        newReview.setUser(userService.findById(id));
         return  reviewRepository.save(newReview);
     }
     public Review findById(long id) {

@@ -45,7 +45,8 @@ private Country country;
 @ManyToMany(fetch = FetchType.EAGER)
 private List<Game> ownedGames;
 
-@OneToMany
+
+@OneToMany(fetch = FetchType.EAGER)
 private List<Review> reviews;
 
     @Override

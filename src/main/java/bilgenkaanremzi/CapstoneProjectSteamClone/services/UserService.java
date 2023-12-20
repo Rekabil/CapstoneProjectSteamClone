@@ -50,9 +50,9 @@ public class UserService {
         userRepository.delete(found);
     }
 
-    public User purchaseGame(long id, String gamesBought) {
+    public User purchaseGame(long id, String gameIds) {
         User found = this.findById(id);
-        List<String> myList = new ArrayList<String>(Arrays.asList(gamesBought.split(",")));
+        List<String> myList = new ArrayList<String>(Arrays.asList(gameIds.split(",")));
         myList.forEach((gameId) -> found.getOwnedGames().add(gameService.findById(Long.parseLong(gameId))));
         return userRepository.save(found);
     }
