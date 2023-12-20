@@ -19,7 +19,8 @@ public class Game {
     private long id;
 
     private String title;
-    private List<String> preview;
+
+    private String preview;
     private String description;
     private String details;
     @Enumerated(EnumType.STRING)

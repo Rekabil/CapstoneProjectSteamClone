@@ -1,12 +1,14 @@
 package bilgenkaanremzi.CapstoneProjectSteamClone.controlers;
 
 import bilgenkaanremzi.CapstoneProjectSteamClone.entities.Review;
+import bilgenkaanremzi.CapstoneProjectSteamClone.entities.User;
 import bilgenkaanremzi.CapstoneProjectSteamClone.exceptions.BadRequestException;
 import bilgenkaanremzi.CapstoneProjectSteamClone.payload.ReviewDTO;
 import bilgenkaanremzi.CapstoneProjectSteamClone.services.ReviewService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -19,11 +21,11 @@ public class ReviewController {
 
     @PostMapping("")
     @ResponseStatus(HttpStatus.CREATED)
-    public Review save(@RequestBody @Validated ReviewDTO body , BindingResult validation) {
+    public Review save(@RequestBody @Validated ReviewDTO body , BindingResult validation , @AuthenticationPrincipal User currentUser) {
         if (validation.hasErrors()) {
             throw new BadRequestException(validation.getAllErrors());
         } else {
-            return reviewService.save(body);
+            return reviewService.save(body, currentUser.getId());
         }
     }
     @GetMapping("")

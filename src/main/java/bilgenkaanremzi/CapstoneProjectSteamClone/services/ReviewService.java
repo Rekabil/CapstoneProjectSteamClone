@@ -20,7 +20,7 @@ public class ReviewService {
     @Autowired
     GameService gameService;
 
-    public Review save(ReviewDTO body) {
+    public Review save(ReviewDTO body, long id) {
         Game game = gameService.findById(body.gameId());
         Review newReview = new Review();
         newReview.setContent(body.content());

@@ -45,6 +45,8 @@ private Country country;
 @ManyToMany(fetch = FetchType.EAGER)
 private List<Game> ownedGames;
 
+@OneToMany
+private List<Review> reviews;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
