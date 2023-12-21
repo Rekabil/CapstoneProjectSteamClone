@@ -61,19 +61,19 @@ public Page<Game> getGames(int page , int size, String orderBy, String category,
     Pageable pageable = PageRequest.of(page,size, Sort.by(orderBy));
     List<Game> games = gameRepository.findAll();
     if (!category.isEmpty()) {
-        games.stream().filter(f-> f.getCategories().contains(Category.valueOf(category))).collect(Collectors.toList());
+       games = games.stream().filter(f-> f.getCategories().contains(Category.valueOf(category))).collect(Collectors.toList());
     }
     if (!title.isEmpty()) {
-        games.stream().filter(f-> f.getTitle().contains(title)).collect(Collectors.toList());
+        games = games.stream().filter(f-> f.getTitle().contains(title)).collect(Collectors.toList());
     }
     if (year != 0) {
-        games.stream().filter(f-> f.getYear() == year).collect(Collectors.toList());
+        games = games.stream().filter(f-> f.getYear() == year).collect(Collectors.toList());
     }
     if (priceGreater != 0 ) {
-        games.stream().filter(f -> f.getPrice() > priceGreater).collect(Collectors.toList());
+        games = games.stream().filter(f -> f.getPrice() > priceGreater).collect(Collectors.toList());
     }
     if (priceLess != 0) {
-        games.stream().filter(f-> f.getPrice() < priceLess).collect(Collectors.toList());
+        games = games.stream().filter(f-> f.getPrice() < priceLess).collect(Collectors.toList());
     }
     return new PageImpl<>(games,pageable,games.size());
 }

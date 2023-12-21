@@ -28,6 +28,7 @@ public class ReviewService {
         Review newReview = new Review();
         newReview.setContent(body.content());
         newReview.setGame(game);
+        newReview.setTitle(body.title());
         newReview.setRating(body.rating());
         newReview.setContent(body.content());
         newReview.setUser(userService.findById(id));
@@ -40,13 +41,13 @@ public class ReviewService {
         Pageable pageable = PageRequest.of(page,size, Sort.by(orderBy));
         List<Review> reviews = reviewRepository.findAll();
         if (ratingGreater != 0) {
-            reviews.stream().filter(f-> f.getRating() < ratingGreater).collect(Collectors.toList());
+           reviews = reviews.stream().filter(f-> f.getRating() < ratingGreater).collect(Collectors.toList());
         }
         if (ratingLess != 0) {
-            reviews.stream().filter(f -> f.getRating() > ratingLess).collect(Collectors.toList());
+            reviews = reviews.stream().filter(f -> f.getRating() > ratingLess).collect(Collectors.toList());
         }
         if (gameId != 0 ) {
-            reviews.stream().filter(f -> f.getGame().getId() == gameId).collect(Collectors.toList());
+            reviews =  reviews.stream().filter(f -> f.getGame().getId() == gameId).collect(Collectors.toList());
         }
 
         return new PageImpl<>(reviews,pageable,reviews.size());
