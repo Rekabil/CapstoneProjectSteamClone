@@ -20,7 +20,7 @@ public class Game {
 
     private String title;
 
-    private String preview;
+    private List<String> preview;
     private String description;
     private String details;
     @Enumerated(EnumType.STRING)

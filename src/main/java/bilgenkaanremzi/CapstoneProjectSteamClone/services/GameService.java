@@ -16,6 +16,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -51,7 +52,6 @@ List<Category> categories = new ArrayList<>();
     public Game findAndUpdateById(long id, GamePutDTO body) {
         Game found = this.findById(id);
 found.setSalePrice(body.salePrice());
-found.setPreview(body.preview());
 found.setDescription(body.description());
 found.setDetails(body.details());
 return gameRepository.save(found);
@@ -91,7 +91,12 @@ public String upload(MultipartFile file) throws IOException {
 
 public Game uploadPicture(long id , MultipartFile file) throws NotFoundException, IOException {
         Game found = this.findById(id);
-        found.setPreview(this.upload(file));
+        if (found.getPreview() == null) {
+            found.setPreview(Collections.singletonList(this.upload(file)));
+        } else {
+            found.getPreview().add(this.upload(file));
+        }
+
 System.out.println("End Upload");
 return gameRepository.save(found);
 }
